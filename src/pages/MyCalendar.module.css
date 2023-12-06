@@ -1,0 +1,47 @@
+/* MyCalendar.module.css */
+.myCalendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #fff; /* Установим белый фон для календаря */
+}
+
+.scheduleGrid {
+  display: grid;
+  grid-template-columns: max-content repeat(10, 1fr); /* одна колонка для времени и пять для аудиторий */
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+
+.gridHeader {
+  display: contents; /* Это гарантирует, что заголовок не создаст новую строку сетки */
+}
+.ant-picker-calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.gridCell {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.timeSlot {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+.occupied {
+  background-color: #ffdfdf; /* Светло-красный цвет для занятых аудиторий */
+}
+
+.free {
+  background-color: #dfffdf; /* Светло-зеленый цвет для свободных аудиторий */
+}
+.booked {
+  background-color: orange; /* Цвет для забронированных слотов */
+}
